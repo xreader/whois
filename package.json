@@ -2,7 +2,7 @@
   "author": {
     "name": "Mikhail Kobrine",
     "email": "xreader@gmail.com",
-    "url": "http://github.com/xreader"
+    "url": "http://github.com/xreader/whois"
   },
   "contributors": [],
   "dependencies": {},
@@ -10,7 +10,7 @@
   "devDependencies": {},
   "keywords": [
     "util",
-    "mime"
+    "whois"
   ],
   "main": "whois.js",
   "name": "whois-ux",
