@@ -10,18 +10,17 @@ Install with [npm](http://github.com/xreader/whois):
 
 ## Usage
 
-
+```
 var whois = require('./whois');
 
 whois.whois('139.130.4.5', function (err, data){
 	console.log(JSON.stringify(data));
 });
-
+```
 output of this call
 
-<code>
+```
 whois {
-
     "NetRange": "139.130.0.0 - 139.130.255.255",
     "CIDR": "139.130.0.0/16",
     "OriginAS": "",
@@ -69,5 +68,4 @@ whois {
     "phone": "+61 3 9815 5923",
     "nic-hdl": "TIAR-AP"
 }
-</code>
-
+```
