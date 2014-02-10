@@ -21,6 +21,7 @@ output of this call
 
 <code>
 whois {
+
     "NetRange": "139.130.0.0 - 139.130.255.255",
     "CIDR": "139.130.0.0/16",
     "OriginAS": "",
