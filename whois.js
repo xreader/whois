@@ -16,18 +16,20 @@ exports.whois = function (ip, callback) {
 			if (line && line.trim() && line.indexOf('%') != 0 && line.indexOf('#') != 0){
 				var dataValuePair =  line.split(":");
 				if (dataValuePair.length == 2) {
-				    if (whoisObj[dataValuePair[0].trim()] instanceof Array) {
-    						whoisObj[dataValuePair[0].trim()].push(dataValuePair[1].trim());
+				    var name = dataValuePair[0].trim()
+				    , value = dataValuePair[1].trim();
+				    if (whoisObj[name] instanceof Array) {
+    						whoisObj[name].push(value);
                     } else { 
-    				    if (whoisObj[dataValuePair[0].trim()]) { 
+    				    if (whoisObj[name] && whoisObj[name] != value) { 
     				        //if there is serveral values with same name ogranizing them as array
-    				        var tmp = whoisObj[dataValuePair[0].trim()];
-        					whoisObj[dataValuePair[0].trim()] = [];
-        					whoisObj[dataValuePair[0].trim()].push(tmp);
-        					whoisObj[dataValuePair[0].trim()].push(dataValuePair[1].trim());
+    				        var tmp = whoisObj[name];
+        					whoisObj[name] = [];
+        					whoisObj[name].push(tmp);
+        					whoisObj[name].push(value);
     				    }	
         				else 
-    						whoisObj[dataValuePair[0].trim()] = dataValuePair[1].trim();
+    						whoisObj[name] = value;
                     }
 				}
 			}
