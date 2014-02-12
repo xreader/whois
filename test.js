@@ -15,6 +15,7 @@ function eq(a, b) {
 //
 
 whois.whois('139.130.4.5', function (err, data){
+    console.log(JSON.stringify(data, null, 4));
 	eq('AU', data.country);     // normal file
 });
 

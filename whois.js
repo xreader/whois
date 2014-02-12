@@ -15,8 +15,21 @@ exports.whois = function (ip, callback) {
 			console.log("whois:processing line:" + (line && line.trim()) + ' '  + (line.indexOf('%') != 0) + '' +  (line.indexOf('#') != 0));
 			if (line && line.trim() && line.indexOf('%') != 0 && line.indexOf('#') != 0){
 				var dataValuePair =  line.split(":");
-				if (dataValuePair.length == 2)
-					whoisObj[dataValuePair[0].trim()] = dataValuePair[1].trim();
+				if (dataValuePair.length == 2) {
+				    if (value instanceof Array) {
+    						whoisObj[dataValuePair[0].trim()].push(dataValuePair[1].trim());
+                    } else { 
+    				    if (whoisObj[dataValuePair[0].trim()]) { 
+    				        //if there is serveral values with same name ogranizing them as array
+    				        var tmp = whoisObj[dataValuePair[0].trim()];
+        					whoisObj[dataValuePair[0].trim()] = [];
+        					whoisObj[dataValuePair[0].trim()].push(tmp);
+        					whoisObj[dataValuePair[0].trim()].push(dataValuePair[1].trim());
+    				    }	
+        				else 
+    						whoisObj[dataValuePair[0].trim()] = dataValuePair[1].trim();
+                    }
+				}
 			}
 			
 		}
