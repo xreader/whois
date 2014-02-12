@@ -16,7 +16,7 @@ exports.whois = function (ip, callback) {
 			if (line && line.trim() && line.indexOf('%') != 0 && line.indexOf('#') != 0){
 				var dataValuePair =  line.split(":");
 				if (dataValuePair.length == 2) {
-				    if (value instanceof Array) {
+				    if (whoisObj[dataValuePair[0].trim()] instanceof Array) {
     						whoisObj[dataValuePair[0].trim()].push(dataValuePair[1].trim());
                     } else { 
     				    if (whoisObj[dataValuePair[0].trim()]) { 
