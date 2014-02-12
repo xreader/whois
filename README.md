@@ -69,3 +69,9 @@ whois {
     "nic-hdl": "TIAR-AP"
 }
 ```
+
+##Testing
+
+```
+node test.js
+```
