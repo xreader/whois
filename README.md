@@ -6,7 +6,7 @@ node.js whois utility to retrive whois infromation
 
 Install with [npm](http://github.com/xreader/whois):
 
-    npm install whois-ux 
+    npm install whois-ux
 
 ## Usage
 
