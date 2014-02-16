@@ -8,11 +8,11 @@ exports.whois = function (ip, callback) {
 	prc.stdout.on('data', function (data) {
 		var str = data.toString()
 		var lines = str.split(/(\r?\n)/g);
-		console.log("whois:received data:" + lines.length);
+		//console.log("whois:received data:" + lines.length);
 		for (var i in lines){
 			var line = lines[i];
-			console.log("data:" + line);
-			console.log("whois:processing line:" + (line && line.trim()) + ' '  + (line.indexOf('%') != 0) + '' +  (line.indexOf('#') != 0));
+			//console.log("data:" + line);
+			//console.log("whois:processing line:" + (line && line.trim()) + ' '  + (line.indexOf('%') != 0) + '' +  (line.indexOf('#') != 0));
 			if (line && line.trim() && line.indexOf('%') != 0 && line.indexOf('#') != 0){
 				var dataValuePair =  line.split(":");
 				if (dataValuePair.length == 2) {
@@ -39,8 +39,8 @@ exports.whois = function (ip, callback) {
 	});
 
 	prc.on('close', function (code) {
-		console.log('process exit code ' + code);
-		console.log('whois ' + JSON.stringify(whoisObj, null, 4));
+		//console.log('process exit code ' + code);
+		//console.log('whois ' + JSON.stringify(whoisObj, null, 4));
 		callback(null, whoisObj);
 	});
 };

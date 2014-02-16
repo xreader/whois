@@ -18,8 +18,8 @@
     "url": "https://github.com/xreader/whois",
     "type": "git"
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "readmeFilename": "README.md",
-  "_id": "whois-ux@0.0.1",
+  "_id": "whois-ux@0.0.2",
   "_from": "whois-ux@0.0.x"
 }
