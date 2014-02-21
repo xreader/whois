@@ -2,7 +2,7 @@
  * Usage: node test.js
  */
 
-var whois = require('./whois');
+var whois = require('whois-ux');
 var assert = require('assert');
 
 function eq(a, b) {
