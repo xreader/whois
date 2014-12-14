@@ -2,6 +2,8 @@
 
 node.js whois utility to retrive whois infromation
 
+[![NPM](https://nodei.co/npm/whois-ux.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/whois-ux/)
+
 The module uses the whois tool. That is not available on windows by default.
 If you are on windows you can get it here http://technet.microsoft.com/en-us/sysinternals/bb897435.aspx
 For linux whois is generally installed at /usr/bin/whois
