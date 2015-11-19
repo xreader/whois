@@ -16,7 +16,7 @@ Install with [npm](http://github.com/xreader/whois):
     
   **Windows users**
   
-  If you are on windows you have to install whois executable from here http://technet.microsoft.com/en-us/sysinternals/bb897435.aspx
+  On windows whois executable is not installed also you need to install it from here http://technet.microsoft.com/en-us/sysinternals/bb897435.aspx
 
 ## Usage
 
