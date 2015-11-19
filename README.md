@@ -13,6 +13,10 @@ For linux whois is generally installed at /usr/bin/whois
 Install with [npm](http://github.com/xreader/whois):
 
     npm install whois-ux
+    
+  **Windows users**
+  
+  If you are on windows you have to install whois executable from here http://technet.microsoft.com/en-us/sysinternals/bb897435.aspx
 
 ## Usage
 
