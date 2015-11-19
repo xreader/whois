@@ -14,6 +14,16 @@ Install with [npm](http://github.com/xreader/whois):
 
     npm install whois-ux
     
+  **Linux**
+  
+  If you get exception check if whois is installed on your system
+  
+  e.g. Ubuntu
+
+```    
+  apt-get install whois
+```
+   
   **Windows users**
   
   On windows whois executable is not installed also you need to install it from here http://technet.microsoft.com/en-us/sysinternals/bb897435.aspx
