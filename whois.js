@@ -15,9 +15,9 @@ exports.whois = function (ip, callback) {
 			//console.log("whois:processing line:" + (line && line.trim()) + ' '  + (line.indexOf('%') != 0) + '' +  (line.indexOf('#') != 0));
 			if (line && line.trim() && line.indexOf('%') != 0 && line.indexOf('#') != 0){
 				var dataValuePair =  line.split(":");
-				if (dataValuePair.length == 2) {
+				if (dataValuePair.length >= 2) {
 				    var name = dataValuePair[0].trim()
-				    , value = dataValuePair[1].trim();
+				    , value = dataValuePair.slice(1).join(":");
 				    if (whoisObj[name] instanceof Array) {
     						whoisObj[name].push(value);
                     } else { 
